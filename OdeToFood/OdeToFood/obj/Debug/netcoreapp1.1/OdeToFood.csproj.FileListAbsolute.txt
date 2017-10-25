@@ -1,0 +1,8 @@
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\bin\Debug\netcoreapp1.1\OdeToFood.deps.json
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\bin\Debug\netcoreapp1.1\OdeToFood.runtimeconfig.json
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\bin\Debug\netcoreapp1.1\OdeToFood.runtimeconfig.dev.json
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\bin\Debug\netcoreapp1.1\OdeToFood.dll
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\bin\Debug\netcoreapp1.1\OdeToFood.pdb
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\obj\Debug\netcoreapp1.1\OdeToFood.AssemblyInfo.cs
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\obj\Debug\netcoreapp1.1\OdeToFood.dll
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\obj\Debug\netcoreapp1.1\OdeToFood.pdb
