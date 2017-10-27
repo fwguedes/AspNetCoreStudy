@@ -6,3 +6,4 @@ C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\bin\Debug\netcoreapp1.1\OdeToF
 C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\obj\Debug\netcoreapp1.1\OdeToFood.AssemblyInfo.cs
 C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\obj\Debug\netcoreapp1.1\OdeToFood.dll
 C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\obj\Debug\netcoreapp1.1\OdeToFood.pdb
+C:\Repository\AspNetCoreStudy\OdeToFood\OdeToFood\obj\Debug\netcoreapp1.1\OdeToFood.csprojResolveAssemblyReference.cache

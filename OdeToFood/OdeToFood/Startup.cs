@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Routing;
+using OdeToFood.Services;
 
 namespace OdeToFood
 {
@@ -37,8 +39,10 @@ namespace OdeToFood
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddSingleton(Configurations);
             services.AddSingleton<IGreeter, Greeter>();
+            services.AddScoped<IRestaurantData, InMemoryRestaurantData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,12 +57,28 @@ namespace OdeToFood
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
-
-            app.Run(async (context) =>
+            }else
             {
-                await context.Response.WriteAsync(greeter.Greet());
-            });
+                app.UseExceptionHandler(new ExceptionHandlerOptions
+                {
+                    ExceptionHandler = (context) => context.Response.WriteAsync("Opa!")
+                });
+            }
+                                  
+            app.UseFileServer(); // app.UseDefaultFiles(); +   app.UseStaticFiles();
+            
+            app.UseMvc(ConfigureRoutes);
+            
+            //No caso do request nao achar nenhuma rota compativel
+            app.Run((context) => context.Response.WriteAsync("Not Found"));
+
+        }
+
+        //Configuracao de rotas para o MVC
+        private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        {
+            routeBuilder.MapRoute("Default",
+                                  "{controller=Home}/{action=index}/{id?}");
         }
     }
 }
