@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        @RenderSection("footer",false)
+        @DateTime.Now.
+        @await Component.InvokeAsync("Greeting")
+    </footer>
+</body>
+</html>

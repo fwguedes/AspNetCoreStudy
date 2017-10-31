@@ -1,20 +1,20 @@
 ﻿@model  OdeToFood.ViewModel.HomePageViewModel
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>OdeToFood!!!</title>
-</head>
-<body>
-    <h2>@Model.TodayMessage</h2>
-    <table>
-        @foreach (var restaurant in Model.Restaurants)
-        {
-            <tr>
-                <td>  @restaurant.Name </td>
-                <td>@Html.ActionLink("View", "Detail", new { Id = restaurant.Id }) </td>
-            </tr>
-        }
-        
-    </table>   
-</body>
-</html>
+
+@{
+    ViewBag.Title = "Home";
+
+}
+
+@foreach (var restaurant in Model.Restaurants)
+{
+    @Html.Partial("_Summary", restaurant)
+
+}
+
+<div>
+    <a asp-controller="Home" asp-action="Create">Create</a>
+
+</div>
+
+
