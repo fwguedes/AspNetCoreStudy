@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using OdeToFood.Entities;
 using OdeToFood.Services;
 using OdeToFood.ViewModel;
 
 namespace OdeToFood.Controllers
 {
+  
     public class HomeController : Controller
     {
         private IRestaurantData _restaurantData;
@@ -16,7 +18,7 @@ namespace OdeToFood.Controllers
             _greeter = greeter;
         }
 
-
+        
         public IActionResult Index()
         {
             var model = new HomePageViewModel();
